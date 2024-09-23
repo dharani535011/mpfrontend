@@ -15,7 +15,7 @@ const Otherprovider = ({children}) => {
  
  const fetchdata = async () => {
   try {
-    setloader(true)
+    // setloader(true)
     const res = await axios.post("https://mpbackend-2udh.onrender.com/users/checkauthen", {}, { withCredentials: true });
 
     if (res.data.message === "on") {
@@ -26,7 +26,7 @@ const Otherprovider = ({children}) => {
   } catch (error) {
     console.log("Error fetching data:", error.message);
   } finally {
-    setloader(false)
+    // setloader(false)
   }
 };
 useEffect(()=>{
