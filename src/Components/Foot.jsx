@@ -55,7 +55,7 @@ const Foot = () => {
           }}>Nutrition</p>
           </span>
           <p>Mr.Perfectgym.com © {date.getFullYear()} ALL RIGHTS RESERVED WEBSITE DESIGNED BY S.D</p>
-          <a href="https://maps.app.goo.gl/H4o4KNC6WjcJx7CS6">Location</a>
+          <a href="https://maps.app.goo.gl/H4o4KNC6WjcJx7CS6">Location🚩</a>
       </div>
       <div className='f3'>
         {(auth==false)&&<button className='bb' onClick={()=>{navigate("/signin")}}>Sign In/Up</button>}
