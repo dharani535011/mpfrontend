@@ -90,7 +90,7 @@ const handlemail=async()=>{
 
 
 <button onClick={handlemail}>Submit</button>
-</form>):( <form onSubmit={formik.handleSubmit} className='signbody' style={{height:"33%"}}>
+</form>):( <form onSubmit={formik.handleSubmit} className='signbody' style={{height:"50%"}}>
 
 <h1>Login</h1>
 <div>
