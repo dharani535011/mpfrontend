@@ -504,7 +504,7 @@ tbody tr:last-child td:last-child {
 .progress {
   position: fixed;    
   z-index: 100000;    
-  top: 67px;          
+  top: 68px;          
   height: 3px;       
   width: 100vw;       
   background-color: red; 
