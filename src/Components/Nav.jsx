@@ -26,7 +26,8 @@ const navigate=useNavigate()
 
   return (
 <>
-<div className='nav' style={{backgroundColor: `rgba(0,0,49, ${width / 9})`,}}>
+<div className='mas' style={{backgroundColor: `rgba(0,0,49, ${width / 9})`,}}>
+<div className='nav' >
         <div className='line1'><h1>Mr.P</h1></div>
         <div className='line2 change'> 
             <h6 onClick={()=>{
@@ -65,6 +66,7 @@ const navigate=useNavigate()
             </div>
         </div>
         </div>
+</div>
         <div className='progress' style={{width:`${width}vw`}}>
 
         </div>
