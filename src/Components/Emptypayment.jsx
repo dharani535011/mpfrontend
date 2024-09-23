@@ -29,7 +29,7 @@ const handlepay=async()=>{
 
                try {
                 setloader(true)
-                const res=await axios.post("http://localhost:3000/users/paymentfee",{
+                const res=await axios.post("https://mpbackend-2udh.onrender.com/users/paymentfee",{
                     mail:userdet.mail,
                     date:selectedDate
                   },{withCredentials:true})

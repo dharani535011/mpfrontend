@@ -9,7 +9,7 @@ const Usersappointment = () => {
       const fetchdata=async()=>{
         try {
             setloader(true)
-            const res=await axios.post("http://localhost:3000/users/allapp",{},{withCredentials:true})
+            const res=await axios.post("https://mpbackend-2udh.onrender.com/users/allapp",{},{withCredentials:true})
             const datas=Array.isArray(res.data)?res.data:[]
             setapp(datas)
         } catch (error) {
@@ -24,7 +24,7 @@ const Usersappointment = () => {
      },[])
 
 
-     
+
 
   return (
     <div className='userside'>

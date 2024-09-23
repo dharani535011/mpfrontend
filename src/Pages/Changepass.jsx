@@ -39,7 +39,7 @@ const Changepass = () => {
     onSubmit: async(values) => {
       try {
         setloader(true)
-        const res=await axios.post("http://localhost:3000/users/changepass",{
+        const res=await axios.post("https://mpbackend-2udh.onrender.com/users/changepass",{
             otp:values.otp,
             mail:values.mail,
             password:values.password,

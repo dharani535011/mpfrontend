@@ -9,7 +9,7 @@ const Userside = () => {
       const fetchdata=async()=>{
         try {
             setloader(true)
-            const res=await axios.post("http://localhost:3000/users/getapp",{},{withCredentials:true})
+            const res=await axios.post("https://mpbackend-2udh.onrender.com/users/getapp",{},{withCredentials:true})
             const datas=Array.isArray(res.data)?res.data:[]
             setapp(datas)
         } catch (error) {
@@ -26,7 +26,7 @@ const Userside = () => {
     const handledelete=async(id)=>{
         try {
             setloader(true)
-            const res=await axios.post("http://localhost:3000/appointments/deleteapp",{id},{withCredentials:true})
+            const res=await axios.post("https://mpbackend-2udh.onrender.com/appointments/deleteapp",{id},{withCredentials:true})
             alert(res.data.message)
         } catch (error) {
             console.log(error.message)

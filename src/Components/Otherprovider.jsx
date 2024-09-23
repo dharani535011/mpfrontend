@@ -16,7 +16,7 @@ const Otherprovider = ({children}) => {
  const fetchdata = async () => {
   try {
     setloader(true)
-    const res = await axios.post("http://localhost:3000/users/checkauthen", {}, { withCredentials: true });
+    const res = await axios.post("https://mpbackend-2udh.onrender.com/users/checkauthen", {}, { withCredentials: true });
 
     if (res.data.message === "on") {
       setuser(res.data.data)

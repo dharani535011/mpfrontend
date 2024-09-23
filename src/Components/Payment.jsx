@@ -30,7 +30,7 @@ const handlepay=async()=>{
     if(selectedDate.length!==10) return alert("enter the valid date")
         setloader(true)
     try {
-        const {data}=await axios.post("http://localhost:3000/payments",{
+        const {data}=await axios.post("https://mpbackend-2udh.onrender.com/payments",{
             amount:600
         },{withCredentials:true})
         const cardElement=element.getElement(CardElement)
@@ -48,7 +48,7 @@ const handlepay=async()=>{
                alert("payment successfully paid")
                try {
                 setloader(true)
-                const res=await axios.post("http://localhost:3000/users/paymentfee",{
+                const res=await axios.post("https://mpbackend-2udh.onrender.com/users/paymentfee",{
                     mail:user.mail,
                     date:selectedDate
                   },{withCredentials:true})
@@ -93,7 +93,7 @@ export default Payment
 
 // isdate()
 // setloader(true)
-// const res=await axios.post("http://localhost:3000/users/paymentfee",{
+// const res=await axios.post("https://mpbackend-2udh.onrender.com/users/paymentfee",{
 //   mail:user.mail,
 //   date:selectedDate
 // },{withCredentials:true})

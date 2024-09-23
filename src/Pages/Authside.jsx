@@ -15,7 +15,7 @@ const Authside = () => {
     const fetchdata=async()=>{
         try {
             setloader(true)
-            const res=await axios.post("http://localhost:3000/users/getusers",{},{withCredentials:true})
+            const res=await axios.post("https://mpbackend-2udh.onrender.com/users/getusers",{},{withCredentials:true})
             const dara=Array.isArray(res.data)?res.data:[]
             setapp(dara)
         } catch (error) {
@@ -43,7 +43,7 @@ const Authside = () => {
 
    const handlemember=async(mail)=>{
           try { setloader(true)
-            const res=await axios.post("http://localhost:3000/users/changemember",{mail},{withCredentials:true})
+            const res=await axios.post("https://mpbackend-2udh.onrender.com/users/changemember",{mail},{withCredentials:true})
            if(res.data.message==="Membership status changed"){
             alert("Membership status changed")
             fetchdata()
@@ -58,7 +58,7 @@ const Authside = () => {
    const handledelete=async(mail)=>{
     try {
         setloader(true)
-        const res=await axios.post("http://localhost:3000/users/deleteuser",{mail},{withCredentials:true})
+        const res=await axios.post("https://mpbackend-2udh.onrender.com/users/deleteuser",{mail},{withCredentials:true})
         if(res.data.message==="User deleted successfully."){
             alert("User deleted successfully.")
             fetchdata()

@@ -49,7 +49,7 @@ const Signup = () => {
     onSubmit: async(values) => {
         try {
             setloader(true)
-            const res=await axios.post("http://localhost:3000/users/signup",{
+            const res=await axios.post("https://mpbackend-2udh.onrender.com/users/signup",{
                 name:values.name,
                 phoneno:values.phoneno,
                 city:values.city,

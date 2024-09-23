@@ -41,7 +41,7 @@ const [mails,setmails]=useState("")
     onSubmit: async(values) => {
         try {
             setloader(true)
-            const res=await axios.post("http://localhost:3000/users/login",{
+            const res=await axios.post("https://mpbackend-2udh.onrender.com/users/login",{
                 
                 mail:values.mail,
                 password:values.password,
@@ -60,7 +60,7 @@ const [mails,setmails]=useState("")
 const handlemail=async()=>{
     try {
         setloader(true)
-        const res=await axios.post("http://localhost:3000/users/forgetpassword",{
+        const res=await axios.post("https://mpbackend-2udh.onrender.com/users/forgetpassword",{
             
             mail:mails,
         },{withCredentials:true})

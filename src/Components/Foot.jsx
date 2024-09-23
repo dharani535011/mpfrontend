@@ -12,7 +12,7 @@ const Foot = () => {
   const handlelogout=async()=>{
     try {
       setloader(true)
-      const res=await axios.post("http://localhost:3000/users/logout",{},{withCredentials:true})
+      const res=await axios.post("https://mpbackend-2udh.onrender.com/users/logout",{},{withCredentials:true})
       alert(res.data.message)
       if(res.data.message==="successfully logout"){
         setauth(false)

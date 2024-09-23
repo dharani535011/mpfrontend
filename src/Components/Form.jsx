@@ -50,7 +50,7 @@ const Form = () => {
             try {
                 setloader(true)
                 // ("Form Values:", values)
-                const res = await axios.post("http://localhost:3000/appointments/book", values,{withCredentials:true})
+                const res = await axios.post("https://mpbackend-2udh.onrender.com/appointments/book", values,{withCredentials:true})
                 alert(res.data.message)
                 if (res.data.message === "appointment booked") {
                     setopen(true) // Set to true to display the thank-you message
