@@ -495,7 +495,7 @@ tbody tr:last-child td:last-child {
 .progress{
   position: fixed;
   z-index: 99;
-  top: 9.75%;
+  top: 10%;
   color: white;
   height: 3px;
   width: 100vw;
@@ -1007,6 +1007,11 @@ tbody tr:last-child td:last-child {
   display: none;
 }
 @media (max-width: 1000px) {
+
+.progress{
+  top: 11%;
+}
+
   .opentab2{
     display: block;
   }
