@@ -6,7 +6,7 @@ const Homebg = () => {
    <>
    <Nav/>
     <div className='homebg'>
-        <video autoPlay loop muted><source src={video} type='video/mp4'/>Your browser does not support the video tag.</video>
+        <video autoPlay playsInline loop muted><source src={video} type='video/mp4'/>Your browser does not support the video tag.</video>
         <div className='overlay'></div>
         <div className='homebody'>
              <div className='homebody2'>
