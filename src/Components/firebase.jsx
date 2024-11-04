@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
+require("dotenv").config()
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
@@ -9,7 +10,7 @@ import 'firebase/compat/firestore';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCjONZcNwOB0IpRlQ0RMcJRbBrMxpw2-GA",
+  apiKey: process.env.googleapi,
   authDomain: "mpmessager-23017.firebaseapp.com",
   projectId: "mpmessager-23017",
   storageBucket: "mpmessager-23017.firebasestorage.app",
