@@ -6,6 +6,7 @@ import Handn from '../Components/Handn'
 import Form from '../Components/Form'
 import Foot from '../Components/Foot'
 import Call from '../Components/Call'
+import Message from '../Components/Message'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
 <Form/>
 <Foot/>
 <Call/>
+<Message/>
 </>
   )
 }

@@ -112,6 +112,7 @@ input:-webkit-autofill::first-line {
         font-weight: bold;
         font-size: larger;
         backdrop-filter: blur(2px);
+        margin-top: 10px;
 
       }
       input:focus{
@@ -356,9 +357,10 @@ tbody tr:last-child td:last-child {
 .homebg {
   position: relative;
   width: 100vw;
-  height: 100vh;
+ min-height: 100vh;
   overflow: hidden;
   margin-top: -3px;
+  max-height: 100%;
 }
 
 .homebg video {
@@ -576,7 +578,6 @@ tbody tr:last-child td:last-child {
     height: 3.5px;
     position: absolute;
     background-color: white;
-    /* top: 65%; */
     right: 1%;
     border-radius: 2px;
     transform: translate(-50%, -50%); 
@@ -1036,7 +1037,7 @@ tbody tr:last-child td:last-child {
 .las{
   position: absolute;
   bottom: 0;
-  right: 6%;
+  right: 44%;
   width: 50px !important;
   border-radius: 15px 15px 0px 0px;
   border: 0px;
@@ -1046,6 +1047,163 @@ tbody tr:last-child td:last-child {
 }
 .call{
   display: none;
+}
+.message{
+  all: unset;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  z-index: 999;
+  bottom: 6%;
+  right: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px ;
+  cursor: pointer;
+  i.fa-solid{
+      color: white;
+      font-size: 20px;
+  }
+
+}
+.chatbox{
+  position: fixed;
+  width: 307px;
+  height: 0px;
+  border: #32325d solid;
+  background-color: rgb(19,13,46);
+  z-index: 9999;
+  bottom: 6%;
+  right: -100%;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  transition: height .5s ease,right .7s ease;
+
+}
+.chatbox.opens{
+  height: 450px;
+  right: 2%;
+}
+.ch1{
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-grow: 1;
+ color: white;
+}
+.chats {
+  flex-grow: 10;
+  background-color: white;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.userc, .authorc {
+  max-width: 70%; 
+  background-color: #32325d;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  word-wrap: break-word; 
+  margin: 5px 0;
+  clear: both;
+}
+
+.userc {
+  align-self: flex-end; 
+  background-color: #0a74da;
+  color: white;
+}
+
+
+.authorc {
+  align-self: flex-start; 
+  background-color: #32325d;
+  color: white;
+}
+
+.sender{
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px;
+  input{
+    border: 0px;
+    border-radius: 4px;
+    /* flex-grow: 8; */
+    width: 75%;
+    padding: 5px;
+  }
+  button{
+    /* flex-grow: 2; */
+    border: 0px;
+    width: 15%;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  input:focus{
+    outline: none;
+  }
+}
+.minus{
+  all: unset;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  z-index: 999;
+  top: -11%;
+  right: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px black;
+  cursor: pointer;
+  i.fa-solid{
+      color: white;
+      font-size: 20px;
+  }
+
+}
+.viewmsg{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.userchat{
+  position: relative;
+  width: 700px;
+  height: 60%;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(19,13,46);
+  color: white;
+  table{
+    width: 90%;
+  }
 }
 @media (max-width: 1000px) {
 
@@ -1104,7 +1262,7 @@ tbody tr:last-child td:last-child {
     height: 50px;
     background-color: red;
     z-index: 999;
-    bottom: 7%;
+    bottom: 15%;
     right: 3%;
     display: flex;
     align-items: center;
@@ -1276,6 +1434,9 @@ tbody tr:last-child td:last-child {
         }
       }
     }
+  }
+  .userchat{
+    width: 93%;
   }
   .signbody{
     width: 90%;

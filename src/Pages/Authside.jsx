@@ -10,8 +10,7 @@ const Authside = () => {
     const [userdet,setuserdet]=userdets
     const [app,setapp]=useState([])
 
-    
-    const [open,setopen]=opens
+    // console.log(alluser)
     const fetchdata=async()=>{
         try {
             setloader(true)

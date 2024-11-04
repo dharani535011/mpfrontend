@@ -11,6 +11,7 @@ const Otherprovider = ({children}) => {
  const [auth,setauth]= useState(false)
  const [fee,setfee]= useState([])
  const [open, setopen] = useState(false)
+ const [alluser,setalluser]=useState([])
  const navigate=useNavigate()
  
  const fetchdata = async () => {
@@ -30,12 +31,23 @@ const Otherprovider = ({children}) => {
   }
 };
 useEffect(()=>{
+   const getdata=async()=>{
+    try {
+      // setloader(true)
+      const res=await axios.post("https://mpbackend-2udh.onrender.com/users/getusers",{},{withCredentials:true})
+      const dara=Array.isArray(res.data)?res.data:[]
+      setalluser(dara)
+  } catch (error) {
+      console.log(error.message)
+  }
+   }
        fetchdata()
+       getdata()
 },[auth])
-// console.log(user.fees)
+// console.log(userdet)
 
   return (
-    <Othercontexts.Provider value={{userdets:[userdet,setuserdet],opens:[open,setopen],fees:[fee,setfee],auths:[auth,setauth],loaders:[loader,setloader],users:[user,setuser]}}>
+    <Othercontexts.Provider value={{ allusers:[alluser,setalluser],userdets:[userdet,setuserdet],opens:[open,setopen],fees:[fee,setfee],auths:[auth,setauth],loaders:[loader,setloader],users:[user,setuser]}}>
        {children}
     </Othercontexts.Provider>
   )
